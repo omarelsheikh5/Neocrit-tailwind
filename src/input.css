@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-Outfit: "Outfit", "sans-serif";
+}
+
+@layer base {
+  h5 {
+    @apply text-[#989898] capitalize mb-0.5;
+  }
+}
