@@ -21,9 +21,3 @@ window.onscroll = function () {
     });
   };
 };
-
-addEventListener("load", function () {
-  this.document
-    .getElementsByClassName("page-effect")[0]
-    .classList.add("opacity-100");
-});
