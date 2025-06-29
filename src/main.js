@@ -1,6 +1,13 @@
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
 let fixedBtn = document.getElementById("fixed-btn");
 window.onscroll = function () {
-  if (window.scrollY >= 3200) {
+  if (window.scrollY >= 1200) {
     fixedBtn.style.opacity = "1";
   } else {
     fixedBtn.style.opacity = "0";
@@ -9,6 +16,7 @@ window.onscroll = function () {
   fixedBtn.onclick = function () {
     window.scrollTo({
       top: 0,
+      left: 0,
       behavior: "smooth",
     });
   };

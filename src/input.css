@@ -3,10 +3,49 @@
 
 @theme {
   --font-Outfit: "Outfit", "sans-serif";
+  --animate-fade-in: fade-in 0.6s linear;
+
+  @keyframes fade-in {
+    0% {
+      transform: translateY(10px);
+      filter: blur(5px);
+    }
+    100% {
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
 }
 
 @layer base {
-  h5 {
+  h4 {
     @apply text-[#989898] capitalize mb-0.5;
+  }
+}
+
+@layer components {
+  .card-img {
+    @apply w-full h-full object-cover transition-transform duration-400 hover:scale-[1.2] cursor-pointer;
+  }
+  .div-card-img {
+    @apply w-full overflow-hidden rounded-lg;
+  }
+  .input {
+    @apply border-2 w-full bg-[#00000086] border-black border-solid px-2 rounded-lg py-1;
+  }
+  .signup-btn {
+    @apply cursor-pointer text-lg text-white bg-gray-800 w-full transition hover:bg-gray-700 active:bg-gray-900 rounded-lg h-10;
+  }
+  .nav-a {
+    @apply inline-block p-3 text-amber-50 rounded-lg hover:bg-blue-500 transition;
+  }
+  .title {
+    @apply text-4xl font-extrabold text-white text-center max-lg:text-3xl max-md:text-2xl max-sm:text-xl tracking-widest drop-shadow-lg uppercase;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    @apply drop-shadow-[0_0_2px_#0af];
   }
 }
